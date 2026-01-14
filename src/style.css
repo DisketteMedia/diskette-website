@@ -1,1 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Imbue:opsz,wght@10..100,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import "tailwindcss";
+@plugin "daisyui" {
+    themes: caramellatte --default, coffee --prefersdark;
+}
+@theme {
+    --font-ubuntu: "Ubuntu", "sans-serif";
+    --font-calistoga: "Calistoga", "serif";
+    --color-diskette-green: #009755;
+    --color-authority-yellow: #EBA70E;
+    --color-media-skobeloff: #007474;
+    --color-kitchen-purple: #89185C;
+    --color-glow-orange: #D24C2B;
+    --color-store-blue: #0072CE;
+    --color-neutral-white: #E5E1E6;
+    --color-light-black: #302E2C;
+}
