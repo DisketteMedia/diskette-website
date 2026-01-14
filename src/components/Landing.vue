@@ -39,7 +39,6 @@ const props = defineProps({
   }
 })
 
-// Refs
 const sineCanvas = ref(null)
 const ctx = ref(null)
 const width = ref(0)
@@ -50,14 +49,12 @@ const waveLeft = ref(0)
 const time = ref(0)
 const animationFrameId = ref(null)
 
-// Computed defaults
 const defaultAmplitude = computed(() => 50)
 const defaultWavelength = computed(() => 50)
 const defaultSegmentLength = computed(() => 10)
 const defaultLineWidth = computed(() => 2)
 const defaultStrokeStyle = computed(() => 'rgba(255, 255, 255, 0.2)')
 
-// Lifecycle Hooks
 onMounted(() => {
   initialize()
   window.addEventListener('resize', handleResize)
@@ -71,7 +68,6 @@ onBeforeUnmount(() => {
   }
 })
 
-// Functions
 function initialize() {
   const canvas = sineCanvas.value
   if (!canvas) throw new Error('No Canvas Selected')
@@ -174,9 +170,12 @@ function loop() {
   <div class="w-screen h-screen flex items-center">
     <canvas class="h-full w-full" ref="sineCanvas"></canvas>
     <div class="w-full absolute flex justify-center">
-      <div class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center">
+      <a class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center" href="#content">
         <img src="/disk.svg" class="my-5" alt="Diskette://logo">
-      </div>
+        <div class="w-full flex justify-between text-5xl font-calistoga" >
+          <RouterLink to="/" class="text-kitchen-purple">Kitchen</RouterLink>
+        </div>
+      </a>
     </div>
   </div>
 </template>
