@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import KitchenIntro from "../KitchenIntro.vue";
+import VideoFeed from "../VideoFeed.vue";
 </script>
 
 <template>
-  <div class="gap-5 m-5">
+  <div class="gap-5 flex flex-col m-5">
     <KitchenIntro />
-  </div>
-  <div class="h-screen">
-    ff
+    <VideoFeed/>
   </div>
 </template>
 
