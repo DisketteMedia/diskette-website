@@ -170,14 +170,19 @@ function loop() {
   <div class="w-screen h-screen flex items-center">
     <canvas class="h-full w-full" ref="sineCanvas"></canvas>
     <div class="w-full absolute flex justify-center">
-      <a class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center" href="#content">
+      <div class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center">
         <img src="/disk.svg" class="my-5" alt="Diskette://logo">
         <div class="w-full flex justify-between text-5xl font-calistoga" >
-          <RouterLink to="/" class="text-kitchen-purple">Kitchen</RouterLink>
+          <RouterLink to="/kitchen" class="text-kitchen-purple">Kitchen</RouterLink>
+          <RouterLink to="/media" class="text-media-skobeloff">Media</RouterLink>
+          <RouterLink to="/glow" class="text-glow-orange">Glow</RouterLink>
+          <RouterLink to="/glow" class="text-store-blue">Store</RouterLink>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

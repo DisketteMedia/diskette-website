@@ -5,7 +5,7 @@
 <template>
   <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
     <aside class="flex items-center">
-      <a href="#">
+      <a href="#content">
         <button class="btn">Back to top</button>
       </a>
       <p class="ms-2 text-primary">Copyright ©2026 Diskette Media</p>

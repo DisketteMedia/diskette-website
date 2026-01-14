@@ -17,8 +17,6 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
-
-
 </script>
 
 <template>
@@ -37,10 +35,10 @@ onMounted(() => {
               </ul>
             </nav>
           </div>
-          <a href="#" class="flex">
+          <RouterLink to="/" class="flex">
             <img src="/disk.svg" class="h-9" alt="Diskette://Logo">
             <div class="text-4xl font-calistoga">{{ $route.name }}</div>
-          </a>
+          </RouterLink>
         </div>
         <div class="navbar-center hidden lg:flex">
           <nav>

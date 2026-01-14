@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Landing from './components/Landing.vue'
+import Landing from './components/Landing.vue';
 import Footer from "./components/Footer.vue";
 import Navigation from "./components/Navigation.vue";
 </script>
@@ -7,18 +7,25 @@ import Navigation from "./components/Navigation.vue";
 <template>
   <Navigation>
     <template v-slot:items>
-      <li>
-        <RouterLink to="/">Kitchen</RouterLink>
-      </li>
+      <nav>
+        <ul class="flex font-ubuntu gap-2 text-lg">
+          <li><RouterLink to="/kitchen">Kitchen</RouterLink></li>
+          <li><RouterLink to="/media">Media</RouterLink></li>
+          <li><RouterLink to="/">Glow</RouterLink></li>
+          <li><a href="https://store.diskette.tv">Store</a></li>
+        </ul>
+      </nav>
     </template>
   </Navigation>
   <Landing />
   <section id="content">
     <RouterView />
   </section>
-  <Footer />
+  <Footer v-if="$route.path !== '/'"/>
 </template>
 
 <style>
-root {scroll-behavior: smooth;}
+html, body {
+  scroll-behavior: smooth;
+}
 </style>
