@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   purchaseAssembled : {
     type: String,
     default: 'https://store.diskette.tv/collections/assembled-glow'

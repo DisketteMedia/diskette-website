@@ -24,7 +24,7 @@ import { Icon } from "@iconify/vue";
               purchaseAssembled="https://store.diskettekitchen.com/products/box-case-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit?Pattern=alhambra"/>
         </div>
-        <div class="rounded-t-2xl rounded-b-md flex gap-2 bg-base-200 items-center p-5 my-5">
+        <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $90 | Kit: $60</span>
         </div>
