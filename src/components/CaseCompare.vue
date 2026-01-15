@@ -20,7 +20,7 @@ import { Icon } from "@iconify/vue";
               purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit"/>
           <CaseCard
               pattern="Alhambra"
-              description="Based on a tile pattern at the Alhambra in Spain, Alhambra is a delightful tribute to symetry."
+              description="Based on a tile pattern at the Alhambra in Spain, Alhambra is a delightful tribute to symmetry."
               purchaseAssembled="https://store.diskettekitchen.com/products/box-case-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit?Pattern=alhambra"/>
         </div>
@@ -36,7 +36,7 @@ import { Icon } from "@iconify/vue";
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
               pattern="Feather"
-              description="Creating a fan of symmetrical shapes, Feather evokes a feeling of natural uniformity and uniqieness."
+              description="Creating a fan of symmetrical shapes, Feather evokes a feeling of natural uniformity and uniqueness."
               purchaseAssembled="https://store.diskettekitchen.com/products/arrowhead-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/arrowhead-glow-kit"/>
           <CaseCard
