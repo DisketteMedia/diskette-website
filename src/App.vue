@@ -11,7 +11,7 @@ import Navigation from "./components/Navigation.vue";
         <ul class="flex font-ubuntu gap-2 text-lg">
           <li><RouterLink to="/kitchen">Kitchen</RouterLink></li>
           <li><RouterLink to="/media">Media</RouterLink></li>
-          <li><RouterLink to="/">Glow</RouterLink></li>
+          <li><RouterLink to="/glow">Glow</RouterLink></li>
           <li><a href="https://store.diskette.tv">Store</a></li>
         </ul>
       </nav>
