@@ -9,7 +9,7 @@ import { Icon } from "@iconify/vue";
       <Icon icon="mingcute:star-fill" width="50"></Icon>
       <span class="text-xl">Glows are customizable! you can choose patterns with various case shapes to fit your own style or space</span>
     </div>
-    <div class="tabs tabs-border justify-center tabs-xl">
+    <div class="tabs tabs-border justify-center tabs-xl bg-base-300 rounded-2xl">
       <input type="radio" name="tabs" class="tab" aria-label="Box Case" checked="checked"/>
       <div class="tab-content bg-base-300 p-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
@@ -24,10 +24,11 @@ import { Icon } from "@iconify/vue";
               purchaseAssembled="https://store.diskettekitchen.com/products/box-case-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit?Pattern=alhambra"/>
         </div>
-        <div class="rounded-t-2xl rounded-b-md flex gap-2 bg-base-200 items-center p-5 mt-5">
+        <div class="rounded-t-2xl rounded-b-md flex gap-2 bg-base-200 items-center p-5 my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $90 | Kit: $60</span>
         </div>
+        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Arrowhead Case"/>
@@ -44,10 +45,11 @@ import { Icon } from "@iconify/vue";
               purchaseAssembled="https://store.diskettekitchen.com/products/arrowhead-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/arrowhead-glow-kit"/>
         </div>
-        <div class="alert mt-5">
+        <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $110 | Kit: $75</span>
         </div>
+        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Teardrop Case"/>
@@ -64,10 +66,11 @@ import { Icon } from "@iconify/vue";
               purchaseAssembled="https://store.diskettekitchen.com/products/teardrop-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/teardrop-glow-kit"/>
         </div>
-        <div class="alert mt-5">
+        <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $120 | Kit: $85</span>
         </div>
+        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Gothic Case"/>
@@ -84,14 +87,16 @@ import { Icon } from "@iconify/vue";
               purchaseAssembled="https://store.diskettekitchen.com/products/gothic-glow-assembled"
               purchaseKit="https://store.diskettekitchen.com/products/gothic-glow-kit"/>
         </div>
-        <div class="alert mt-5">
+        <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $110 | Kit: $70</span>
         </div>
+        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
-    </div>
-    <div class="card bg-base-300 font-ubuntu grid place-items-center p-5 w-full gap-5">
-      <h1>Both finished products are identical and support is available for either type.</h1>
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>
