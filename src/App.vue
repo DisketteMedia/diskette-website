@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Landing from './components/Landing.vue';
 import Footer from "./components/Footer.vue";
 import Navigation from "./components/Navigation.vue";

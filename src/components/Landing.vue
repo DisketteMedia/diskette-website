@@ -1,177 +1,94 @@
-<script setup>
-import {ref, onMounted, onBeforeUnmount, computed} from 'vue'
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
 
-const props = defineProps({
-  speed: {
-    type: Number,
-    default: 8
-  },
-  waves: {
-    default: () => [
-      {
-        timeModifier: 1,
-        lineWidth: 10,
-        amplitude: 1000,
-        wavelength: 100,
-        segmentLength: 20
-      },
-      {
-        timeModifier: 1,
-        lineWidth: 2,
-        amplitude: 150,
-        wavelength: 100
-      },
-      {
-        timeModifier: 1,
-        lineWidth: 1,
-        amplitude: -150,
-        wavelength: 50,
-        segmentLength: 10
-      },
-      {
-        timeModifier: 1,
-        lineWidth: 0.5,
-        amplitude: -100,
-        wavelength: 100,
-        segmentLength: 10
-      }
-    ]
+interface Wave {
+  amplitude: number
+  frequency: number
+  speed: number
+  phase: number
+  color: string
+  lineWidth: number
+  yOffset: number
+}
+
+const canvasRef = ref<HTMLCanvasElement | null>(null)
+let time = 0
+
+const waves: Wave[] = [
+  { amplitude: 30, frequency: 0.008, speed: 0.015, phase: 0, color: 'rgba(6, 182, 212, 0.7)', lineWidth: 5, yOffset: 0.2 },
+  { amplitude: 50, frequency: 0.006, speed: 0.012, phase: 1, color: 'rgba(34, 211, 238, 0.5)', lineWidth: 3, yOffset: 0.25 },
+  { amplitude: 25, frequency: 0.012, speed: 0.02, phase: 2, color: 'rgba(167, 139, 250, 0.6)', lineWidth: 1, yOffset: 0.35 },
+  { amplitude: 60, frequency: 0.004, speed: 0.008, phase: 0.5, color: 'rgba(139, 92, 246, 0.4)', lineWidth: 2.5, yOffset: 0.45 },
+  { amplitude: 40, frequency: 0.01, speed: 0.018, phase: 3, color: 'rgba(244, 114, 182, 0.5)', lineWidth: 1.5, yOffset: 0.5 },
+  { amplitude: 35, frequency: 0.007, speed: 0.01, phase: 1.5, color: 'rgba(251, 113, 133, 0.4)', lineWidth: 1, yOffset: 0.55 },
+  { amplitude: 55, frequency: 0.005, speed: 0.014, phase: 2.5, color: 'rgba(52, 211, 153, 0.5)', lineWidth: 2, yOffset: 0.65 },
+  { amplitude: 20, frequency: 0.015, speed: 0.025, phase: 4, color: 'rgba(45, 212, 191, 0.3)', lineWidth: 8, yOffset: 0.7 },
+  { amplitude: 45, frequency: 0.009, speed: 0.011, phase: 0.8, color: 'rgba(251, 191, 36, 0.4)', lineWidth: 1.5, yOffset: 0.8 },
+  { amplitude: 70, frequency: 0.003, speed: 0.006, phase: 3.5, color: 'rgba(96, 165, 250, 0.35)', lineWidth: 5, yOffset: 0.4 },
+]
+
+const drawWave = (ctx: CanvasRenderingContext2D, wave: Wave, width: number, height: number) => {
+  const baseY = height * wave.yOffset
+
+  ctx.beginPath()
+  ctx.strokeStyle = wave.color
+  ctx.lineWidth = wave.lineWidth
+  ctx.lineCap = 'round'
+  ctx.lineJoin = 'round'
+
+  for (let x = 0; x <= width; x += 2) {
+    const y =
+        baseY +
+        Math.sin(x * wave.frequency + time * wave.speed + wave.phase) * wave.amplitude +
+        Math.sin(x * wave.frequency * 0.5 + time * wave.speed * 1.3 + wave.phase * 0.7) * (wave.amplitude * 0.4) +
+        Math.sin(x * wave.frequency * 2 + time * wave.speed * 0.7) * (wave.amplitude * 0.2)
+
+    if (x === 0) {
+      ctx.moveTo(x, y)
+    } else {
+      ctx.lineTo(x, y)
+    }
   }
-})
 
-const sineCanvas = ref(null)
-const ctx = ref(null)
-const width = ref(0)
-const height = ref(0)
-const dpr = ref(1)
-const waveWidth = ref(0)
-const waveLeft = ref(0)
-const time = ref(0)
-const animationFrameId = ref(null)
+  ctx.stroke()
+}
 
-const defaultAmplitude = computed(() => 50)
-const defaultWavelength = computed(() => 50)
-const defaultSegmentLength = computed(() => 10)
-const defaultLineWidth = computed(() => 2)
-const defaultStrokeStyle = computed(() => 'rgba(255, 255, 255, 0.2)')
+const animate = () => {
+  const canvas = canvasRef.value
+  if (!canvas) return
+
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+  waves.forEach((wave) => {
+    drawWave(ctx, wave, canvas.width, canvas.height)
+  })
+
+  time += 1
+  requestAnimationFrame(animate)
+}
+
+const resizeCanvas = () => {
+  const canvas = canvasRef.value
+  if (!canvas) return
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+}
 
 onMounted(() => {
-  initialize()
-  window.addEventListener('resize', handleResize)
-  loop()
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', handleResize)
-  if (animationFrameId.value) {
-    cancelAnimationFrame(animationFrameId.value)
-  }
-})
-
-function initialize() {
-  const canvas = sineCanvas.value
-  if (!canvas) throw new Error('No Canvas Selected')
-
-  ctx.value = canvas.getContext('2d')
-  if (!props.waves.length) throw new Error('No waves specified')
-
   resizeCanvas()
-  resizeEvent()
-}
-
-function handleResize() {
-  resizeCanvas()
-  resizeEvent()
-}
-
-function resizeCanvas() {
-  const canvas = sineCanvas.value
-  dpr.value = window.devicePixelRatio || 1
-
-  width.value = canvas.width = window.innerWidth * dpr.value
-  height.value = canvas.height = window.innerHeight * dpr.value
-
-  waveWidth.value = width.value * 0.95
-  waveLeft.value = width.value * 0.025
-}
-
-function resizeEvent() {
-  const gradient = ctx.value.createLinearGradient(0, 0, width.value, 0)
-  gradient.addColorStop(0, 'rgba(0, 0, 0, 0)')
-  gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.5)')
-  gradient.addColorStop(1, 'rgba(0, 0, 0, 0)')
-
-  for (let i = 0; i < props.waves.length; i++) {
-    props.waves[i].strokeStyle = gradient
-  }
-}
-
-function clear() {
-  ctx.value.clearRect(0, 0, width.value, height.value)
-}
-
-function update(currentTime) {
-  time.value = time.value - 0.007
-  const t = typeof currentTime === 'undefined' ? time.value : currentTime
-
-  for (let i = 0; i < props.waves.length; i++) {
-    const timeModifier = props.waves[i].timeModifier || 1
-    drawSine(t * timeModifier, props.waves[i])
-  }
-}
-
-function ease(percent, amplitude) {
-  const PI2 = Math.PI * 2
-  const HALFPI = Math.PI / 2
-  return amplitude * (Math.sin(percent * PI2 - HALFPI) + 1) * 0.5
-}
-
-function drawSine(timeVal, options = {}) {
-  const amplitude = options.amplitude || defaultAmplitude.value
-  const wavelength = options.wavelength || defaultWavelength.value
-  const lineWidthVal = options.lineWidth || defaultLineWidth.value
-  const strokeStyle = options.strokeStyle || defaultStrokeStyle.value
-  const segmentLength = options.segmentLength || defaultSegmentLength.value
-
-  let x = timeVal
-  let y = 0
-  let amp = amplitude
-
-  const yAxis = height.value / 2
-
-  ctx.value.lineWidth = lineWidthVal * dpr.value
-  ctx.value.strokeStyle = strokeStyle
-  ctx.value.lineCap = 'round'
-  ctx.value.lineJoin = 'round'
-  ctx.value.beginPath()
-
-  ctx.value.moveTo(0, yAxis)
-  ctx.value.lineTo(waveLeft.value, yAxis)
-
-  for (let i = 0; i < waveWidth.value; i += segmentLength) {
-    x = (timeVal * props.speed) + (-yAxis + i) / wavelength
-    y = Math.sin(x)
-    amp = ease(i / waveWidth.value, amplitude)
-    ctx.value.lineTo(i + waveLeft.value, amp * y + yAxis)
-  }
-
-  ctx.value.lineTo(width.value, yAxis)
-  ctx.value.stroke()
-}
-
-function loop() {
-  clear()
-  update()
-  animationFrameId.value = requestAnimationFrame(loop)
-}
+  animate()
+})
 </script>
 
 <template>
   <div class="w-screen h-screen flex items-center">
-    <canvas class="h-full w-full" ref="sineCanvas"></canvas>
+    <canvas ref="canvasRef" class="fixed inset-0 w-full h-full " />
     <div class="w-full absolute flex justify-center">
       <div class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center">
-        <img src="/disk.svg" class="my-5" alt="Diskette://logo">
+        <img src="/disk.svg" class="my-5" alt="Diskette logo">
         <div class="w-full flex justify-between text-5xl font-calistoga" >
           <RouterLink to="/kitchen" class="text-kitchen-purple">Kitchen</RouterLink>
           <RouterLink to="/media" class="text-media-skobeloff">Media</RouterLink>
