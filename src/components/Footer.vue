@@ -1,19 +1,18 @@
 <script setup lang="ts">
-
+import Social from "./Social.vue";
 </script>
 
 <template>
-  <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-    <aside class="flex items-center">
-      <a href="#content">
-        <button class="btn">Back to top</button>
-      </a>
+  <div class="mx-5 mb-5 rounded-2xl flex bg-base-300 justify-between p-4">
+    <div class="flex items-center">
+      <a role="button" href="#content" class="btn">Back to top</a>
       <p class="ms-2 text-primary">Copyright ©2026 Diskette Media</p>
-    </aside>
-    <nav class="grid-flow-col md:place-self-center md:justify-self-end items-center">
+    </div>
+    <div class="flex items-center gap-3">
       <a href="https://github.com/DisketteMedia/website" target="_blank" class="me-2 text-primary underline">View source</a>
-    </nav>
-  </footer>
+      <Social/>
+    </div>
+  </div>
 </template>
 
 <style scoped>

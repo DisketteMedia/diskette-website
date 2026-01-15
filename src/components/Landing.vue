@@ -84,8 +84,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative min-h-screen w-full flex items-center justify-center">
-    <canvas ref="canvasRef" class="fixed inset-0 w-full h-full"/>
+  <div class="relative h-screen w-full flex items-center justify-center z-0">
+    <canvas ref="canvasRef" class="absolute w-full h-full"/>
     <div class="relative w-full flex justify-center">
       <div class="flex flex-col items-center w-full px-5 md:px-10 lg:px-20 xl:px-40">
         <img src="/disk.svg" class="my-6 w-full" alt="Diskette logo"/>
@@ -93,7 +93,7 @@ onMounted(() => {
           <RouterLink to="/kitchen" class="hover:text-kitchen-purple hover:scale-110 transition duration-300">Kitchen</RouterLink>
           <RouterLink to="/media" class="hover:text-media-skobeloff hover:scale-110 transition duration-300">Media</RouterLink>
           <RouterLink to="/glow" class="hover:text-glow-orange hover:scale-110 transition duration-300">Glow</RouterLink>
-          <RouterLink to="/store" class="hover:text-store-blue hover:scale-110 transition duration-300">Store</RouterLink>
+          <a href="https://store.diskette.tv" class="hover:text-store-blue hover:scale-110 transition duration-300">Store</a>
         </div>
       </div>
     </div>
