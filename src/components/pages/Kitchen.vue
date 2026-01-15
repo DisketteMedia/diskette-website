@@ -1,12 +1,39 @@
 <script setup lang="ts">
 import KitchenIntro from "../KitchenIntro.vue";
 import VideoFeed from "../VideoFeed.vue";
+import ProjectCard from "../ProjectCard.vue";
+import ProjectIntro from "../ProjectIntro.vue";
 </script>
 
 <template>
   <div class="mx-5 mb-5 flex flex-col gap-5">
     <KitchenIntro />
     <VideoFeed/>
+    <ProjectIntro/>
+    <div class="gap-5 grid grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1">
+      <ProjectCard
+          title="Redesigned PS3 Slim"
+          image="/images/projects/ps3.webp"
+          description="Turing the boring PlayStation 3 Slim design into something better with the a combination of laser cutting and 3d printing."
+          downloadLink="https://www.printables.com/model/1315364"
+          videoLink="https://www.youtube.com/watch?v=B34Np3TN8Rs"/>
+      <ProjectCard
+          title="The Case"
+          image="/images/projects/case.webp"
+          description="A fully 3d printed, modular computer case optimized to be a NAS chassis. Accommodates a fully passively cooled ITX board, eight 2.5 in drives, and a full ATX sized PSU."
+          downloadLink="https://www.printables.com/model/1073452"
+          videoLink="https://www.youtube.com/watch?v=kKrAZ_lCJe4"/>
+      <ProjectCard
+          title="iPod Shuffle Shadow Box"
+          description="Retrofitting a dead iPod Shuffle to a gorgeous yet simple piece of wall art"
+          downloadLink="https://www.printables.com/model/981437"
+          videoLink="https://www.youtube.com/watch?v=pcYXZlmIuOg"/>
+      <!--
+      <div class="card bg-base-300 p-4 w-full shadow-sm border border-dashed text-center justify-center text-2xl">See more on my
+        <router-link to="/portfolio" class="underline">portfolio.</router-link>
+      </div>
+      -->
+    </div>
   </div>
 </template>
 
