@@ -16,13 +16,13 @@ import { Icon } from "@iconify/vue";
           <CaseCard
               pattern="Flower"
               description="Inspired by wild clematis flowers, Flower brings a touch of nature mixed with technology to the room."
-              purchaseAssembled="https://store.diskettekitchen.com/products/box-case-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/box-case-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/box-case-glow-kit"/>
           <CaseCard
               pattern="Alhambra"
               description="Based on a tile pattern at the Alhambra in Spain, Alhambra is a delightful tribute to symmetry."
-              purchaseAssembled="https://store.diskettekitchen.com/products/box-case-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/box-case-glow-kit?Pattern=alhambra"/>
+              purchaseAssembled="https://store.diskette.tv/products/box-case-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/box-case-glow-kit?Pattern=alhambra"/>
         </div>
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
@@ -37,13 +37,13 @@ import { Icon } from "@iconify/vue";
           <CaseCard
               pattern="Feather"
               description="Creating a fan of symmetrical shapes, Feather evokes a feeling of natural uniformity and uniqueness."
-              purchaseAssembled="https://store.diskettekitchen.com/products/arrowhead-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/arrowhead-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"/>
           <CaseCard
               pattern="Leaf"
               description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskettekitchen.com/products/arrowhead-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/arrowhead-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"/>
         </div>
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
@@ -58,13 +58,13 @@ import { Icon } from "@iconify/vue";
           <CaseCard
               pattern="Bubble"
               description="Similar to a Voronoi pattern, Bubble creates a sense of order combined with random whimsy."
-              purchaseAssembled="https://store.diskettekitchen.com/products/teardrop-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/teardrop-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"/>
           <CaseCard
               pattern="Leaf"
               description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskettekitchen.com/products/teardrop-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/teardrop-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"/>
         </div>
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
@@ -79,13 +79,13 @@ import { Icon } from "@iconify/vue";
           <CaseCard
               pattern="Leaf"
               description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskettekitchen.com/products/gothic-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/gothic-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"/>
           <CaseCard
               pattern="Bubble"
               description="Similar to a Voronoi pattern, Bubble creates a sense of order combined with random whimsy."
-              purchaseAssembled="https://store.diskettekitchen.com/products/gothic-glow-assembled"
-              purchaseKit="https://store.diskettekitchen.com/products/gothic-glow-kit"/>
+              purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"/>
         </div>
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
