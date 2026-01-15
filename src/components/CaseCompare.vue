@@ -10,7 +10,7 @@ import { Icon } from "@iconify/vue";
       <span class="text-xl">Glows are customizable! you can choose patterns with various case shapes to fit your own style or space</span>
     </div>
     <div class="tabs tabs-border justify-center tabs-xl bg-base-300 rounded-2xl">
-      <input type="radio" name="tabs" class="tab" aria-label="Box Case" checked="checked"/>
+      <input type="radio" name="tabs" class="tab" aria-label="Box Case" checked="true"/>
       <div class="tab-content bg-base-300 p-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
