@@ -84,16 +84,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-screen h-screen flex items-center">
-    <canvas ref="canvasRef" class="fixed inset-0 w-full h-full " />
-    <div class="w-full absolute flex justify-center">
-      <div class="flex flex-col w-full px-10 lg:px-60 md:px-30 sm:px-20 xs:px-10 items-center">
-        <img src="/disk.svg" class="my-5" alt="Diskette logo">
-        <div class="w-full flex justify-between text-5xl font-calistoga" >
-          <RouterLink to="/kitchen" class="text-kitchen-purple">Kitchen</RouterLink>
-          <RouterLink to="/media" class="text-media-skobeloff">Media</RouterLink>
-          <RouterLink to="/glow" class="text-glow-orange">Glow</RouterLink>
-          <RouterLink to="/glow" class="text-store-blue">Store</RouterLink>
+  <div class="relative min-h-screen w-full flex items-center justify-center">
+    <canvas ref="canvasRef" class="fixed inset-0 w-full h-full"/>
+    <div class="relative w-full flex justify-center">
+      <div class="flex flex-col items-center w-full px-5 md:px-10 lg:px-20 xl:px-40">
+        <img src="/disk.svg" class="my-6 w-full" alt="Diskette logo"/>
+        <div class="w-full font-calistoga text-5xl md:text-8xl lg:text-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-auto gap-y-5">
+          <RouterLink to="/kitchen" class="hover:text-kitchen-purple hover:scale-110 transition duration-300">Kitchen</RouterLink>
+          <RouterLink to="/media" class="hover:text-media-skobeloff hover:scale-110 transition duration-300">Media</RouterLink>
+          <RouterLink to="/glow" class="hover:text-glow-orange hover:scale-110 transition duration-300">Glow</RouterLink>
+          <RouterLink to="/store" class="hover:text-store-blue hover:scale-110 transition duration-300">Store</RouterLink>
         </div>
       </div>
     </div>
