@@ -1,12 +1,11 @@
 <script setup lang="ts">
-const props = defineProps({
-  videoLink: {
+defineProps({
+  clickLink: {
     type: String,
-    default: 'https://youtube.com'
   },
-  downloadLink: {
+  actionTitle: {
     type: String,
-    default: 'https://www.printables.com/@diskette'
+    default: 'Download files'
   },
   title: {
     type: String,
@@ -14,7 +13,6 @@ const props = defineProps({
   },
   description: {
     type: String,
-    default: 'Project description'
   },
   image: {
     type: String,
@@ -24,7 +22,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <a target="_blank" :href="videoLink" class="hover-3d">
+  <a target="_blank" :href="clickLink" class="hover-3d">
     <div class="card bg-base-100 image-full w-full shadow-sm hover:drop-shadow-xl">
       <figure>
         <img :src="image" class="aspect-video" :alt="title" />
@@ -32,9 +30,7 @@ const props = defineProps({
       <div class="card-body">
         <h2 class="card-title">{{ title }}</h2>
         <p>{{ description }}</p>
-        <a role="button" class="card-actions justify-end" target="_blank" :href="downloadLink">
-          <button class="btn btn-primary">Download files</button>
-        </a>
+        <div class="card-actions justify-end mt-5"><slot></slot></div>
       </div>
     </div>
   </a>
