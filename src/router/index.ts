@@ -1,43 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Kitchen from "../components/pages/Kitchen.vue";
-import Media from "../components/pages/Media.vue";
-import Glow from "../components/pages/Glow.vue";
 
 const routes = [
     {
-        path: '/',
-        name: 'Landing',
-        meta: {
-            title: 'Diskette.TV',
-            description: 'The home of the Diskette Kitchen, a collection of thoughtful, high quality videos about technology, from past to present.'
-        }
-    },
-    {
         path: '/kitchen',
-        component: Kitchen,
         name: 'Kitchen',
-        meta: {
-            title: 'Diskette Kitchen',
-            description: 'Thoughtful, high quality videos about technology, from past to present.'
-        }
+        meta: { title: 'Diskette Kitchen' },
+        component: () => import('../components/pages/Kitchen.vue'),
     },
     {
         path: '/media',
-        component: Media,
         name: 'Media',
-        meta: {
-            title: 'Diskette Media',
-            description: 'Media production and products behind Diskette Kitchen'
-        }
+        meta: { title: 'Diskette Media' },
+        component: () => import('../components/pages/Media.vue'),
     },
     {
         path: '/glow',
-        component: Glow,
         name: 'Glow',
-        meta: {
-            title: 'Diskette Glow',
-            description: 'The unique touch every room needs.'
-        }
+        meta: { title: 'Diskette Glow' },
+        component: () => import('../components/pages/Glow.vue'),
     },
 ];
 
@@ -52,17 +32,9 @@ const router = createRouter({
     }
 });
 
-router.afterEach((to) => {
-    if (to.meta.title) {
-        let title;
-        if (typeof to.meta.title === 'function') {
-            title = to.meta.title(to);
-        }
-        else {
-            title = to.meta.title;
-        }
-        document.title = title;
-    }
-});
-
 export default router;
+
+router.beforeEach((to, ) => {
+    const defaultTitle = 'Diskette TV';
+    document.title = to.meta.title as string || defaultTitle;
+});
