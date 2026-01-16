@@ -2,6 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: () => import('../components/pages/404.vue'),
+    },
+    {
+        path: '/',
+        name: 'Landing',
+        component: () => import('../components/pages/Blank.vue'),
+    },
+    {
         path: '/kitchen',
         name: 'Kitchen',
         meta: { title: 'Diskette Kitchen' },
