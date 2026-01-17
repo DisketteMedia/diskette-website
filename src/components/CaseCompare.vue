@@ -11,7 +11,7 @@ import { Icon } from "@iconify/vue";
     </div>
     <div class="tabs tabs-border justify-center tabs-xl bg-base-300 rounded-2xl">
       <input type="radio" name="tabs" class="tab" aria-label="Box Case" checked="true"/>
-      <div class="tab-content bg-base-300 p-5">
+      <div class="tab-content bg-base-300 px-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
               pattern="Flower"
@@ -27,12 +27,12 @@ import { Icon } from "@iconify/vue";
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $90 | Kit: $60</span>
+          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
         </div>
-        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Arrowhead Case"/>
-      <div class="tab-content bg-base-300 p-5">
+      <div class="tab-content bg-base-300 px-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
               pattern="Feather"
@@ -48,12 +48,12 @@ import { Icon } from "@iconify/vue";
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $110 | Kit: $75</span>
+          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
         </div>
-        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Teardrop Case"/>
-      <div class="tab-content bg-base-300 p-5">
+      <div class="tab-content bg-base-300 px-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
               pattern="Bubble"
@@ -69,12 +69,12 @@ import { Icon } from "@iconify/vue";
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $120 | Kit: $85</span>
+          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
         </div>
-        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
 
       <input type="radio" name="tabs" class="tab" aria-label="Gothic Case"/>
-      <div class="tab-content bg-base-300 p-5">
+      <div class="tab-content bg-base-300 px-5">
         <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <CaseCard
               pattern="Leaf"
@@ -90,8 +90,8 @@ import { Icon } from "@iconify/vue";
         <div class="alert my-5">
           <Icon icon="solar:tag-price-bold" width="40"></Icon>
           <span class="text-4xl font-ubuntu">Assembled: $110 | Kit: $70</span>
+          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
         </div>
-        <h1 class="text-xl">Both finished products are identical and support is available for either type.</h1>
       </div>
     </div>
   </div>
