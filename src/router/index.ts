@@ -29,6 +29,12 @@ const routes = [
         meta: { title: 'Diskette Glow' },
         component: () => import('../components/pages/Glow.vue'),
     },
+    {
+        path: '/subscribed',
+        name: 'Subscribed',
+        meta: { title: 'Diskette Glow' },
+        component: () => import('../components/pages/EmailConfirmed.vue'),
+    },
 ];
 
 const router = createRouter({
