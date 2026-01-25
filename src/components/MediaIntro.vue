@@ -24,8 +24,10 @@ import {Icon} from '@iconify/vue'
           <img src="/mediaWide.svg" alt="Diskette Media" class="drop-shadow-md/30 drop-shadow-amber-100 w-full">
         </picture>
         <div class="gap-2 justify-center flex my-5">
-          <a href="#contact" role="button" class="btn btn-primary sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Let's talk</a>
-          <a href="#portfolio" role="button" class="btn btn-neutral sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">What we've done</a>
+          <router-link to="#contact" role="button" class="btn btn-primary sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Let's talk</router-link>
+          <!--
+          <router-link to="#contact" role="button" class="btn btn-neutral sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">What we've done</router-link>
+          -->
         </div>
       </div>
     </div>

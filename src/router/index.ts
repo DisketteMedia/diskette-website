@@ -40,17 +40,26 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes,
-    scrollBehavior() {
-        return {
-            el: '#content',
-            top: 90,
+    scrollBehavior(to, _from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth',
+            };
+        } else {
+            return {
+                el: '#content',
+                top: 95,
+            };
         }
-    }
+    },
 });
 
 export default router;
 
 router.beforeEach((to, ) => {
-    const defaultTitle = 'Diskette TV';
+    const defaultTitle = 'Diskette.TV';
     document.title = to.meta.title as string || defaultTitle;
 });

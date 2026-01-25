@@ -13,7 +13,7 @@
           <img src="/images/glow/GlowWide.svg" alt="Diskette glow" class="drop-shadow-xl/30 drop-shadow-amber-100 w-full">
         </picture>
         <div class="gap-2 justify-center flex my-5">
-          <a href="#glow" role="button" class="btn btn-neutral sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Learn More</a>
+          <router-link to="#story" role="button" class="btn btn-neutral sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Learn More</router-link>
           <a href="https://store.diskettekitchen.com/collections/assembled-lanterns"
              role="button" class="btn btn-primary sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Buy Now
           </a>
