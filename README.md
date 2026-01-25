@@ -1,5 +1,39 @@
-# Vue 3 + TypeScript + Vite
+# Diskette Website
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is the official website for the Diskette Universe (Diskette Kitchen, Diskette Media, and Diskette Glow)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+You are welcome to use parts as you please, although no promies of quality
+
+### Install
+
+```bash
+#npm
+npm install
+
+#pnpm
+pnpm install
+```
+
+### Dev
+
+```bash
+#npm
+npm dev
+
+#pnpm
+pnpm dev
+```
+
+### Environmental variables
+
+Two functions of this site use APIs, the YouTube post feed for Kitchen, and the Glow email subscription box. If you wish for these to function you must aquire a YouTube and a Kit V3 API keys.
+
+Create a .env file at the root of the project (or rename the .env.example file) and fill out the following, replacing {yourApiKey} with your actual api key.
+
+```plaintext
+VITE_YOUTUBE={yourYourApiKey}
+VITE_KIT={yourKitApiKey}
+VITE_KIT_FORMID={yourKitFormId}
+```
+
+In the case of the form id, you'll need to create any form in your Kit dashboard and then copy the form id from the embed section. You can use any form template as long as it has the first name and email parameters.
