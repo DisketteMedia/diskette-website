@@ -40,8 +40,12 @@ const get = (url: string) => fetch(url).then(r => r.json())
 export function useYouTube() {
     const videos = ref<Video[]>([])
     const error = ref<string | null>(null)
+    const isLoading = ref(false)
 
     const fetchVideos = async () => {
+        isLoading.value = true
+        error.value = null
+
         try {
             const channel = await get(
                 `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelID}&key=${apiKey}`
@@ -58,7 +62,7 @@ export function useYouTube() {
                 ?.map((i: any) => i.snippet.resourceId.videoId)
                 .join(",")
 
-            if (!ids) return
+            if (!ids) throw new Error("No videos found")
 
             const data = await get(
                 `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${ids}&key=${apiKey}`
@@ -78,10 +82,17 @@ export function useYouTube() {
                 }))
         } catch (e) {
             error.value = e instanceof Error ? e.message : "Failed to load videos"
+        } finally {
+            isLoading.value = false
         }
     }
 
     onMounted(fetchVideos)
 
-    return { videos, error }
+    return {
+        videos,
+        error,
+        isLoading,
+        fetchVideos,
+    }
 }

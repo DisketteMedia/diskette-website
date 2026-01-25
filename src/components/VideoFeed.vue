@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {useYouTube} from '../composables/YouTube.ts'
 
-const {videos, error} = useYouTube()
+const {videos, error, isLoading} = useYouTube()
 </script>
 
 <template>
@@ -9,8 +9,34 @@ const {videos, error} = useYouTube()
     <h1 class="font-bold text-xl mb-2">Error loading video feed: </h1>
     <p>{{ error }}</p>
   </div>
-  <div v-else class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-5">
-    <a class="hover-3d cursor-pointer" v-for="video in videos" :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank">
+
+  <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-5">
+    <div v-if="isLoading" class="hover-3d cursor-pointer">
+      <div class="card bg-base-300 shadow-sm skeleton">
+        <div class="w-full bg-base-200 aspect-video"/>
+        <div class="card-body skeleton h-35"></div>
+      </div>
+    </div>
+    <div v-if="isLoading" class="hover-3d cursor-pointer">
+      <div class="card bg-base-300 shadow-sm skeleton">
+        <div class="w-full bg-base-200 aspect-video"/>
+        <div class="card-body skeleton h-35"></div>
+      </div>
+    </div>
+    <div v-if="isLoading" class="hover-3d cursor-pointer">
+      <div class="card bg-base-300 shadow-sm skeleton">
+        <div class="w-full bg-base-200 aspect-video"/>
+        <div class="card-body skeleton h-35"></div>
+      </div>
+    </div>
+    <div v-if="isLoading" class="hover-3d cursor-pointer">
+      <div class="card bg-base-300 shadow-sm skeleton">
+        <div class="w-full bg-base-200 aspect-video"/>
+        <div class="card-body skeleton h-35"></div>
+      </div>
+    </div>
+
+    <a v-else class="hover-3d cursor-pointer" v-for="video in videos" :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank">
       <div class="card bg-base-300 shadow-sm">
         <img class="w-full aspect-video object-cover" :src="video.thumbnail" :alt="video.title"/>
         <div class="card-body">
