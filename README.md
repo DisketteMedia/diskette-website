@@ -4,27 +4,37 @@ This is the official website for the Diskette Universe (Diskette Kitchen, Disket
 
 You are welcome to use parts as you please (according to the license), although no promies of quality
 
+## Development
+
 ### Install
 
-```bash
-#npm
-npm install
+NPM
 
-#pnpm
+```plaintext
+npm install
+```
+
+PNPM
+
+```plaintext
 pnpm install
 ```
 
 ### Dev
 
-```bash
-#npm
-npm dev
+NPM
 
-#pnpm
+```plaintext
+npm run dev
+```
+
+PNPM
+
+```plaintext
 pnpm dev
 ```
 
-### Environmental variables
+## Environmental variables
 
 Two functions of this site use APIs, the YouTube post feed for Kitchen, and the Glow email subscription box. If you wish for these to function you must aquire a YouTube and a Kit V3 API keys.
 
