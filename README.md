@@ -2,7 +2,7 @@
 
 This is the official website for the Diskette Universe (Diskette Kitchen, Diskette Media, and Diskette Glow)
 
-You are welcome to use parts as you please, although no promies of quality
+You are welcome to use parts as you please (according to the license), although no promies of quality
 
 ### Install
 
@@ -37,3 +37,6 @@ VITE_KIT_FORMID={yourKitFormId}
 ```
 
 In the case of the form id, you'll need to create any form in your Kit dashboard and then copy the form id from the embed section. You can use any form template as long as it has the first name and email parameters.
+
+
+Copyright © 2026 Diskette Media
