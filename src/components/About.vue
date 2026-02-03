@@ -17,7 +17,7 @@ import Social from './Social.vue';
           <div class="lg:w-150 md:w-full sm:w-full flex flex-col md:pe-20 pe-10">
             <div class="py-5 font-ubuntu text-xl flex flex-col gap-3">
               <p>
-                Greetings! I'm Wren and I my mission is to help people learn about technology.
+                Greetings! I'm Wren, and my mission is to help people learn about technology.
               </p>
               <p>
                 I have a background in making things, having previously run a makerspace at a museum,
