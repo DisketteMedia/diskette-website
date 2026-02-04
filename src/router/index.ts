@@ -4,36 +4,36 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         name: '404',
-        component: () => import('../components/pages/404.vue'),
+        component: () => import('../views/404.vue'),
     },
     {
         path: '/',
         name: 'Landing',
-        component: () => import('../components/pages/Blank.vue'),
+        component: () => import('../views/Blank.vue'),
     },
     {
         path: '/kitchen',
         name: 'Kitchen',
         meta: { title: 'Diskette Kitchen' },
-        component: () => import('../components/pages/Kitchen.vue'),
+        component: () => import('../views/Kitchen.vue'),
     },
     {
         path: '/media',
         name: 'Media',
         meta: { title: 'Diskette Media' },
-        component: () => import('../components/pages/Media.vue'),
+        component: () => import('../views/Media.vue'),
     },
     {
         path: '/glow',
         name: 'Glow',
         meta: { title: 'Diskette Glow' },
-        component: () => import('../components/pages/Glow.vue'),
+        component: () => import('../views/Glow.vue'),
     },
     {
         path: '/subscribed',
         name: 'Subscribed',
         meta: { title: 'Diskette Glow' },
-        component: () => import('../components/pages/EmailConfirmed.vue'),
+        component: () => import('../views/EmailConfirmed.vue'),
     },
 ];
 

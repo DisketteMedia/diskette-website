@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import KitchenIntro from "../KitchenIntro.vue";
-import VideoFeed from "../VideoFeed.vue";
-import ImageCard from "../ImageCard.vue";
+import KitchenIntro from "../components/KitchenIntro.vue";
+import VideoFeed from "../components/VideoFeed.vue";
+import ImageCard from "../components/ImageCard.vue";
 </script>
 
 <template>

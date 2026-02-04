@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import GlowLanding from "../GlowLanding.vue";
-import CaseCompare from "../CaseCompare.vue";
-import KitSubscribe from "../KitSubscribe.vue";
+import GlowLanding from "../components/GlowLanding.vue";
+import CaseCompare from "../components/CaseCompare.vue";
+import KitSubscribe from "../components/KitSubscribe.vue";
 </script>
 
 <template>

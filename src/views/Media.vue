@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import About from "../About.vue";
-import Contact from "../Contact.vue";
-import MediaIntro from "../MediaIntro.vue";
+import About from "../components/About.vue";
+import Contact from "../components/Contact.vue";
+import MediaIntro from "../components/MediaIntro.vue";
 </script>
 
 <template>
