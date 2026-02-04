@@ -15,7 +15,6 @@ const gothicPatterns = (['Leaf', 'Feather'])
       <Icon icon="mingcute:star-fill" width="50"></Icon>
       <span class="text-xl">Glows are customizable! you can choose patterns with various case shapes to fit your own style or space</span>
     </div>
-
     <div class="card bg-base-300 md:p-5">
       <div class="carousel max-w-4xl w-full items-center mx-auto gap-5">
         <div id="box" class="carousel-item relative w-full">
