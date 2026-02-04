@@ -2,8 +2,9 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-    themes: caramellatte --default, coffee --prefersdark;
+    themes: emerald --default, synthwave --prefersdark;
 }
+
 @theme {
     --font-sans: "Space Grotesk", "sans-serif";
     --font-calistoga: "Calistoga", "serif";
@@ -16,3 +17,4 @@
     --color-neutral-white: #E5E1E6;
     --color-light-black: #302E2C;
 }
+
