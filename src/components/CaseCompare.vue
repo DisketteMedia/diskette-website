@@ -17,7 +17,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
     </div>
 
     <div class="card bg-base-300 md:p-5">
-      <div class="carousel max-w-5xl w-full items-center mx-auto gap-5">
+      <div class="carousel max-w-4xl w-full items-center mx-auto gap-5">
         <div id="box" class="carousel-item relative w-full">
           <div id="box" class="carousel-item flex w-full items-center gap-5">
             <CaseCard
