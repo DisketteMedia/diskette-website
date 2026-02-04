@@ -48,8 +48,8 @@ const patternChips = computed(() => {
     </div>
     <div class="card-body p-5">
       <h2 class="md:text-8xl text-4xl font-calistoga md:pt-10 md:px-10">{{caseName}}</h2>
-      <p class="md:text-4xl text-md font-space md:px-10">{{description}}</p>
-      <div class="text-xl font-space flex gap-3 items-center justify-end md:px-2">
+      <p class="md:text-4xl text-md md:px-10">{{description}}</p>
+      <div class="text-xl flex gap-3 items-center justify-end md:px-2">
         <span class="md:text-lg text-sm">Available patterns:</span>
         <div class="badge badge-primary md:badge-md badge-sm" v-for="patternChip in patternChips" key="tag">{{ patternChip }}</div>
       </div>

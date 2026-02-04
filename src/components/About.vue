@@ -15,7 +15,7 @@ import Social from './Social.vue';
           <h2 class="text-4xl mb-1 font-bold font-calistoga">Wren Allison-Bunnell</h2>
           <h2 class="text-2xl font-bold font-calistoga mb-5">(They/them)</h2>
           <div class="lg:w-150 md:w-full sm:w-full flex flex-col md:pe-20 pe-10">
-            <div class="py-5 font-ubuntu text-xl flex flex-col gap-3">
+            <div class="py-5 text-xl flex flex-col gap-3">
               <p>
                 Greetings! I'm Wren, and my mission is to help people learn about technology.
               </p>

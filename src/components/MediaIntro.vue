@@ -12,7 +12,7 @@ import {Icon} from '@iconify/vue'
         <img src="/images/portfolio/camSetup.webp" alt="Wren setting up a camera for shooting">
       </div>
       <div class="absolute right-3 bottom-3 flex gap-3 items-center">
-        <span class="font-ubuntu font-black text-2xl text-white">Scroll</span>
+        <span class="font-black text-2xl text-white">Scroll</span>
         <Icon icon="pixel:arrow-circle-right-solid" color="white" height="35px"/>
       </div>
     </div>

@@ -8,7 +8,7 @@
       <div class="ms-10 ">
         <h1 class="text-6xl mb-5 font-bold font-calistoga">Updates</h1>
         <div class="lg:w-150 md:w-full sm:w-full flex flex-col gap-3 md:pe-20 pe-10">
-          <p class="text-xl font-ubuntu font-bold">
+          <p class="text-xl font-bold">
             Sign up for the mailing list for updates on new patterns, firmware updates and other Glow extras.
           </p>
           <form class="fieldset">

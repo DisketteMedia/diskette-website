@@ -8,7 +8,7 @@ import Navigation from "./components/Navigation.vue";
   <Navigation>
     <template v-slot:items>
       <nav>
-        <ul class="flex font-ubuntu gap-2 text-lg">
+        <ul class="flex gap-2 text-lg">
           <li><RouterLink to="/kitchen">Kitchen</RouterLink></li>
           <li><RouterLink to="/media">Media</RouterLink></li>
           <li><RouterLink to="/glow">Glow</RouterLink></li>
