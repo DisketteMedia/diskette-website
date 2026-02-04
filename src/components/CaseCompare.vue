@@ -16,30 +16,31 @@ const gothicPatterns = (['Leaf', 'Feather'])
       <span class="text-xl">Glows are customizable! you can choose patterns with various case shapes to fit your own style or space</span>
     </div>
 
-    <div class="card bg-base-300 p-5">
+    <div class="card bg-base-300 md:p-5">
       <div class="carousel max-w-5xl w-full items-center mx-auto gap-5">
-        <div id="box" class="carousel-item flex w-full items-center gap-5">
-          <a href="#box" class="btn btn-circle" disabled="true">
-            <Icon icon="pixelarticons:arrow-left" width="40"/>
-          </a>
-          <CaseCard
-              caseName="Box"
-              imagePath="/images/glow/box.webp"
-              purchaseAssembled="https://store.diskette.tv/products/box-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/box-glow-kit"
-              assembledPrice="90"
-              kitPrice="60"
-              :patternsAvailable="boxPatterns"
-          />
-          <a href="#arrowhead" class="btn btn-circle">
-            <Icon icon="pixelarticons:arrow-right" width="40"/>
-          </a>
+        <div id="box" class="carousel-item relative w-full">
+          <div id="box" class="carousel-item flex w-full items-center gap-5">
+            <CaseCard
+                caseName="Box"
+                imagePath="/images/glow/box.webp"
+                purchaseAssembled="https://store.diskette.tv/products/box-glow-assembled"
+                purchaseKit="https://store.diskette.tv/products/box-glow-kit"
+                assembledPrice="80"
+                kitPrice="60"
+                :patternsAvailable="boxPatterns"
+            />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#box" class="btn btn-circle" disabled>
+                <Icon icon="pixelarticons:arrow-left" width="20"/>
+              </a>
+              <a href="#teardrop" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-right" width="20"/>
+              </a>
+            </div>
+          </div>
         </div>
         <div id="arrowhead" class="carousel-item relative w-full">
           <div id="box" class="carousel-item flex w-full items-center gap-5">
-            <a href="#box" class="btn btn-circle">
-              <Icon icon="pixelarticons:arrow-left" width="40"/>
-            </a>
             <CaseCard
                 caseName="Arrowhead"
                 imagePath="/images/glow/arrowhead.webp"
@@ -49,16 +50,19 @@ const gothicPatterns = (['Leaf', 'Feather'])
                 kitPrice="70"
                 :patternsAvailable="arrowheadPatterns"
             />
-            <a href="#teardrop" class="btn btn-circle">
-              <Icon icon="pixelarticons:arrow-right" width="40"/>
-            </a>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#box" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-left" width="20"/>
+              </a>
+              <a href="#teardrop" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-right" width="20"/>
+              </a>
+            </div>
           </div>
         </div>
         <div id="teardrop" class="carousel-item relative w-full">
           <div id="box" class="carousel-item flex w-full items-center gap-5">
-            <a href="#arrowhead" class="btn btn-circle">
-              <Icon icon="pixelarticons:arrow-left" width="40"/>
-            </a>
+
             <CaseCard
                 caseName="Teardrop"
                 imagePath="/images/glow/teardrop.webp"
@@ -68,16 +72,19 @@ const gothicPatterns = (['Leaf', 'Feather'])
                 kitPrice="75"
                 :patternsAvailable="teardropPatterns"
             />
-            <a href="#gothic" class="btn btn-circle">
-              <Icon icon="pixelarticons:arrow-right" width="40"/>
-            </a>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#arrowhead" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-left" width="20"/>
+              </a>
+              <a href="#gothic" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-right" width="20"/>
+              </a>
+            </div>
+
           </div>
         </div>
         <div id="gothic" class="carousel-item relative w-full">
           <div id="box" class="carousel-item flex w-full items-center gap-5">
-            <a href="#teardrop" class="btn btn-circle">
-              <Icon icon="pixelarticons:arrow-left" width="40"/>
-            </a>
             <CaseCard
                 caseName="Gothic"
                 imagePath="/images/glow/gothic.webp"
@@ -87,9 +94,14 @@ const gothicPatterns = (['Leaf', 'Feather'])
                 kitPrice="70"
                 :patternsAvailable="gothicPatterns"
             />
-            <a class="btn btn-circle" disabled>
-              <Icon icon="pixelarticons:arrow-right" width="40"/>
-            </a>
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#teardrop" class="btn btn-circle">
+                <Icon icon="pixelarticons:arrow-left" width="20"/>
+              </a>
+              <a class="btn btn-circle" disabled>
+                <Icon icon="pixelarticons:arrow-right" width="20"/>
+              </a>
+            </div>
           </div>
         </div>
       </div>

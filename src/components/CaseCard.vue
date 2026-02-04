@@ -17,7 +17,7 @@ const props = defineProps({
   },
   description: {
     type: String,
-    default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla magna vulputate libero consequat luctus in eget sem.'
+    default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla magna vulputate.'
   },
   imagePath: {
     type: String,
@@ -48,21 +48,15 @@ const patternChips = computed(() => {
       <img class="rounded-2xl" :src="imagePath" :alt="caseName + 'case image'" />
     </div>
     <div class="card-body p-5">
-      <h2 class="text-8xl font-calistoga pt-10 px-10">{{caseName}}</h2>
-      <p class="text-2xl font-space px-10">{{description}}</p>
-      <div class="text-xl font-space flex gap-3 items-center px-2">
-        <span >Available patterns:</span>
-        <div class="badge badge-primary badge-md" v-for="patternChip in patternChips" key="tag">{{ patternChip }}</div>
+      <h2 class="md:text-8xl text-4xl font-calistoga md:pt-10 md:px-10">{{caseName}}</h2>
+      <p class="md:text-2xl text-md font-space md:px-10">{{description}}</p>
+      <div class="text-xl font-space flex gap-3 items-center justify-end md:px-2">
+        <span class="md:text-lg text-sm">Available patterns:</span>
+        <div class="badge badge-primary md:badge-md badge-sm" v-for="patternChip in patternChips" key="tag">{{ patternChip }}</div>
       </div>
-      <div class="flex justify-between md:flex sm:block gap-5 mt-3">
-        <div class="alert alert-vertical md:alert-horizontal w-full">
-          <Icon icon="solar:tag-price-bold" width="25"></Icon>
-          <span class="font-space">Assembled: ${{assembledPrice}} | Kit: ${{kitPrice}}</span>
-          <div class="gap-2 flex">
-            <a role="button" :href="purchaseAssembled" class="btn btn-sm btn-primary">Buy Assembled</a>
-            <a role="button" :href="purchaseKit" class="btn btn-sm btn-secondary">Buy Kit</a>
-          </div>
-        </div>
+      <div class="flex justify-end md:flex sm:block gap-5 mt-3">
+        <a role="button" :href="purchaseAssembled" class="btn btn-sm btn-primary">Buy Assembled - ${{assembledPrice}}</a>
+        <a role="button" :href="purchaseKit" class="btn btn-sm btn-secondary">Buy Kit - ${{kitPrice}}</a>
       </div>
     </div>
   </div>
