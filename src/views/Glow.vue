@@ -7,7 +7,6 @@ import KitSubscribe from "../components/KitSubscribe.vue";
 <template>
   <div class="mx-5 mb-5 flex flex-col gap-5">
     <GlowLanding />
-    <CaseCompare />
     <section id="story">
       <div class="card bg-base-300 p-5 flex flex-col gap-5">
         <h1 class="text-3xl md:text-5xl lg:text-8xl p-5 font-calistoga">The Story - Box Alhambra</h1>
@@ -37,24 +36,25 @@ import KitSubscribe from "../components/KitSubscribe.vue";
         </div>
       </div>
     </section>
-
     <section id="compare">
       <CaseCompare />
     </section>
-    <div class="w-full overflow-hidden card bg-base-300 items-center">
-      <div class="hero-content flex-col lg:flex-row gap-20 px-20 p-5 lg:py-20">
-        <img class="w-full md:w-150 px-10" src="/envelopeFlipped.svg" alt="wren"/>
-        <div class="ms-10 ">
-          <h1 class="text-6xl mb-5 font-bold font-calistoga">Updates</h1>
-          <div class="lg:w-150 md:w-full sm:w-full flex flex-col gap-3 md:pe-20 pe-10">
-            <p class="text-xl font-ubuntu font-bold">
-              Sign up for the mailing list for updates on new patterns, firmware updates and other Glow extras.
-            </p>
-            <KitSubscribe />
+    <section id="contact">
+      <div class="w-full overflow-hidden card bg-base-300 items-center">
+        <div class="hero-content flex-col lg:flex-row gap-20 px-20 p-5 lg:py-20">
+          <img class="w-full md:w-150 px-10" src="/envelopeFlipped.svg" alt="wren"/>
+          <div class="ms-10 ">
+            <h1 class="text-6xl mb-5 font-bold font-calistoga">Updates</h1>
+            <div class="lg:w-150 md:w-full sm:w-full flex flex-col gap-3 md:pe-20 pe-10">
+              <p class="text-xl font-ubuntu font-bold">
+                Sign up for the mailing list for updates on new patterns, firmware updates and other Glow extras.
+              </p>
+              <KitSubscribe />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
