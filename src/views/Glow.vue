@@ -39,7 +39,7 @@ import KitSubscribe from "../components/KitSubscribe.vue";
     <section id="compare">
       <CaseCompare />
     </section>
-    <section id="contact">
+    <section id="mail">
       <div class="w-full overflow-hidden card bg-base-300 items-center">
         <div class="hero-content flex-col lg:flex-row gap-20 px-20 p-5 lg:py-20">
           <img class="w-full md:w-150 px-10" src="/envelopeFlipped.svg" alt="wren"/>
