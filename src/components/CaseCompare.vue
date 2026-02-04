@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import CaseCard from "./CaseCard.vue";
 import { Icon } from "@iconify/vue";
+
+const boxPatterns = (['Alhambra', 'Flower', ])
+const arrowheadPatterns = (['Feather', 'Leaf', ])
+const teardropPatterns = (['Bubble', 'Leaf', ])
+const gothicPatterns = (['Leaf', 'Feather'])
+
 </script>
 
 <template>
@@ -9,88 +15,82 @@ import { Icon } from "@iconify/vue";
       <Icon icon="mingcute:star-fill" width="50"></Icon>
       <span class="text-xl">Glows are customizable! you can choose patterns with various case shapes to fit your own style or space</span>
     </div>
-    <div class="tabs tabs-border justify-center tabs-xl bg-base-300 rounded-2xl">
-      <input type="radio" name="tabs" class="tab text-4xl font-ubuntu my-2" aria-label="Box Case" checked="true"/>
-      <div class="tab-content bg-base-300 px-5">
-        <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-          <CaseCard
-              pattern="Flower"
-              description="Inspired by wild clematis flowers, Flower brings a touch of nature mixed with technology to the room."
-              purchaseAssembled="https://store.diskette.tv/products/box-case-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/box-case-glow-kit"/>
-          <CaseCard
-              pattern="Alhambra"
-              description="Based on a tile pattern at the Alhambra in Spain, Alhambra is a delightful tribute to symmetry."
-              purchaseAssembled="https://store.diskette.tv/products/box-case-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/box-case-glow-kit?Pattern=alhambra"/>
-        </div>
-        <div class="alert my-5">
-          <Icon icon="solar:tag-price-bold" width="40"></Icon>
-          <span class="text-2xl font-ubuntu">Assembled: $90 | Kit: $60</span>
-          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
-        </div>
-      </div>
 
-      <input type="radio" name="tabs" class="tab text-4xl font-ubuntu my-2" aria-label="Arrowhead Case"/>
-      <div class="tab-content bg-base-300 px-5">
-        <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+    <div class="card bg-base-300 p-5">
+      <div class="carousel max-w-5xl w-full items-center mx-auto gap-5">
+        <div id="box" class="carousel-item flex w-full items-center gap-5">
+          <a href="#box" class="btn btn-circle" disabled="true">
+            <Icon icon="pixelarticons:arrow-left" width="40"/>
+          </a>
           <CaseCard
-              pattern="Feather"
-              description="Creating a fan of symmetrical shapes, Feather evokes a feeling of natural uniformity and uniqueness."
-              purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"/>
-          <CaseCard
-              pattern="Leaf"
-              description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"/>
+              caseName="Box"
+              imagePath="/images/glow/box.webp"
+              purchaseAssembled="https://store.diskette.tv/products/box-glow-assembled"
+              purchaseKit="https://store.diskette.tv/products/box-glow-kit"
+              assembledPrice="90"
+              kitPrice="60"
+              :patternsAvailable="boxPatterns"
+          />
+          <a href="#arrowhead" class="btn btn-circle">
+            <Icon icon="pixelarticons:arrow-right" width="40"/>
+          </a>
         </div>
-        <div class="alert my-5">
-          <Icon icon="solar:tag-price-bold" width="40"></Icon>
-          <span class="text-2xl font-ubuntu">Assembled: $110 | Kit: $75</span>
-          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
+        <div id="arrowhead" class="carousel-item relative w-full">
+          <div id="box" class="carousel-item flex w-full items-center gap-5">
+            <a href="#box" class="btn btn-circle">
+              <Icon icon="pixelarticons:arrow-left" width="40"/>
+            </a>
+            <CaseCard
+                caseName="Arrowhead"
+                imagePath="/images/glow/arrowhead.webp"
+                purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
+                purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"
+                assembledPrice="110"
+                kitPrice="70"
+                :patternsAvailable="arrowheadPatterns"
+            />
+            <a href="#teardrop" class="btn btn-circle">
+              <Icon icon="pixelarticons:arrow-right" width="40"/>
+            </a>
+          </div>
         </div>
-      </div>
-
-      <input type="radio" name="tabs" class="tab text-4xl font-ubuntu my-2" aria-label="Teardrop Case"/>
-      <div class="tab-content bg-base-300 px-5">
-        <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-          <CaseCard
-              pattern="Bubble"
-              description="Similar to a Voronoi pattern, Bubble creates a sense of order combined with random whimsy."
-              purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"/>
-          <CaseCard
-              pattern="Leaf"
-              description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"/>
+        <div id="teardrop" class="carousel-item relative w-full">
+          <div id="box" class="carousel-item flex w-full items-center gap-5">
+            <a href="#arrowhead" class="btn btn-circle">
+              <Icon icon="pixelarticons:arrow-left" width="40"/>
+            </a>
+            <CaseCard
+                caseName="Teardrop"
+                imagePath="/images/glow/teardrop.webp"
+                purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
+                purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"
+                assembledPrice="120"
+                kitPrice="75"
+                :patternsAvailable="teardropPatterns"
+            />
+            <a href="#gothic" class="btn btn-circle">
+              <Icon icon="pixelarticons:arrow-right" width="40"/>
+            </a>
+          </div>
         </div>
-        <div class="alert my-5">
-          <Icon icon="solar:tag-price-bold" width="40"></Icon>
-          <span class="text-2xl font-ubuntu">Assembled: $120 | Kit: $85</span>
-          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
-        </div>
-      </div>
-
-      <input type="radio" name="tabs" class="tab text-4xl font-ubuntu my-2" aria-label="Gothic Case"/>
-      <div class="tab-content bg-base-300 px-5">
-        <div class="w-full gap-5 grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
-          <CaseCard
-              pattern="Leaf"
-              description="Inspired by the treetops, Leaf creates a sense of tranquility and harmony."
-              purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"/>
-          <CaseCard
-              pattern="Bubble"
-              description="Similar to a Voronoi pattern, Bubble creates a sense of order combined with random whimsy."
-              purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
-              purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"/>
-        </div>
-        <div class="alert my-5">
-          <Icon icon="solar:tag-price-bold" width="40"></Icon>
-          <span class="text-2xl font-ubuntu">Assembled: $110 | Kit: $70</span>
-          <span class="text-xl">Both finished products are identical and support is available for either type.</span>
+        <div id="gothic" class="carousel-item relative w-full">
+          <div id="box" class="carousel-item flex w-full items-center gap-5">
+            <a href="#teardrop" class="btn btn-circle">
+              <Icon icon="pixelarticons:arrow-left" width="40"/>
+            </a>
+            <CaseCard
+                caseName="Gothic"
+                imagePath="/images/glow/gothic.webp"
+                purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
+                purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"
+                assembledPrice="110"
+                kitPrice="70"
+                :patternsAvailable="gothicPatterns"
+            />
+            <a class="btn btn-circle" disabled>
+              <Icon icon="pixelarticons:arrow-right" width="40"/>
+            </a>
+          </div>
         </div>
       </div>
     </div>
