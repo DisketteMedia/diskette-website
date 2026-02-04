@@ -14,7 +14,7 @@
         </picture>
         <div class="gap-2 justify-center flex my-5">
           <router-link to="#story" role="button" class="btn btn-neutral sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Learn More</router-link>
-          <a href="https://store.diskettekitchen.com/collections/assembled-lanterns"
+          <a href="https://store.diskette.tv/collections/all-glow"
              role="button" class="btn btn-primary sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Buy Now
           </a>
         </div>
