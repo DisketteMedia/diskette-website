@@ -21,6 +21,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
           <div id="box" class="carousel-item flex w-full items-center gap-5">
             <CaseCard
                 caseName="Box"
+                description="Our most classic case, perfect for a tabletop or sideboard, Box is largely inspired by a Japanese Andon Lantern."
                 imagePath="/images/glow/box.webp"
                 purchaseAssembled="https://store.diskette.tv/products/box-glow-assembled"
                 purchaseKit="https://store.diskette.tv/products/box-glow-kit"
@@ -32,7 +33,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
               <a href="#box" class="btn btn-circle" disabled>
                 <Icon icon="pixelarticons:arrow-left" width="20"/>
               </a>
-              <a href="#teardrop" class="btn btn-circle">
+              <a href="#arrowhead" class="btn btn-circle">
                 <Icon icon="pixelarticons:arrow-right" width="20"/>
               </a>
             </div>
@@ -42,6 +43,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
           <div id="box" class="carousel-item flex w-full items-center gap-5">
             <CaseCard
                 caseName="Arrowhead"
+                description="Usually paring with the Feather pattern, Arrowhead aims for balance and elegance in a simple shape."
                 imagePath="/images/glow/arrowhead.webp"
                 purchaseAssembled="https://store.diskette.tv/products/arrowhead-glow-assembled"
                 purchaseKit="https://store.diskette.tv/products/arrowhead-glow-kit"
@@ -64,6 +66,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
 
             <CaseCard
                 caseName="Teardrop"
+                description="The pinnacle of nature inspiration in the case line, Teardrop works well in multiple orientations and angles."
                 imagePath="/images/glow/teardrop.webp"
                 purchaseAssembled="https://store.diskette.tv/products/teardrop-glow-assembled"
                 purchaseKit="https://store.diskette.tv/products/teardrop-glow-kit"
@@ -86,6 +89,7 @@ const gothicPatterns = (['Leaf', 'Feather'])
           <div id="box" class="carousel-item flex w-full items-center gap-5">
             <CaseCard
                 caseName="Gothic"
+                description="Modeled after a combination of an antique radio and Gothic architecture, Gothic is yet another blend of elegance and simplicity."
                 imagePath="/images/glow/gothic.webp"
                 purchaseAssembled="https://store.diskette.tv/products/gothic-glow-assembled"
                 purchaseKit="https://store.diskette.tv/products/gothic-glow-kit"
