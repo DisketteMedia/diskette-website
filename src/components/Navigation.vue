@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import {onMounted, ref} from 'vue'
+import Social from "./Social.vue";
+import Theme from "./Theme.vue";
 
 const props = defineProps({
   disketteText : {
@@ -47,8 +49,9 @@ onMounted(() => {
             </ul>
           </nav>
         </div>
-        <div class="navbar-end hidden lg:flex">
-          <Social icon-size="20px"/>
+        <div class="navbar-end ">
+          <Theme class="mx-3"/>
+          <Social class="hidden lg:flex" icon-size="20px"/>
         </div>
       </div>
     </div>

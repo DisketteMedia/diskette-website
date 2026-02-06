@@ -60,6 +60,6 @@ const router = createRouter({
 export default router;
 
 router.beforeEach((to, ) => {
-    const defaultTitle = 'Diskette.TV';
+    const defaultTitle = 'Diskette.tv';
     document.title = to.meta.title as string || defaultTitle;
 });
