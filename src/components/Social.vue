@@ -17,7 +17,7 @@ defineProps({
     <a role="button" class="btn btn-neutral dark:btn-primary join-item" href="https://bsky.app/profile/diskette.tv">
       <Icon :width="iconSize" :height="iconSize" icon="ri:bluesky-fill"/>
     </a>
-    <a role="button" class="btn btn-neutral dark:btn-primary join-item" href="https://instagram.com/diskettekitchen">
+    <a role="button" class="btn btn-neutral dark:btn-primary join-item" href="https://instagram.com/diskette.tv">
       <Icon :width="iconSize" :height="iconSize" icon="mdi:instagram"/>
     </a>
     <a role="button" class="btn btn-neutral dark:btn-primary join-item" href="https://printables.com/@diskette">
