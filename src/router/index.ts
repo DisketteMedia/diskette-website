@@ -4,11 +4,13 @@ const routes = [
     {
         path: '/:pathMatch(.*)*',
         name: '404',
+        meta: { title: 'Not found', hideLanding: true, hideFoot: true },
         component: () => import('../views/404.vue'),
     },
     {
         path: '/',
         name: 'Landing',
+        meta: {  hideNav: true, hideFoot: true },
         component: () => import('../views/Blank.vue'),
     },
     {
@@ -32,8 +34,14 @@ const routes = [
     {
         path: '/subscribed',
         name: 'Subscribed',
-        meta: { title: 'Diskette Glow' },
+        meta: { title: 'Diskette Glow', hideLanding: true, hideFoot: true },
         component: () => import('../views/EmailConfirmed.vue'),
+    },
+    {
+        path: '/waves',
+        name: 'Waves',
+        meta: { title: 'Waves', hideLanding: true, hideNav: true, hideFoot: true },
+        component: () => import('../views/DiskWaves.vue'),
     },
 ];
 

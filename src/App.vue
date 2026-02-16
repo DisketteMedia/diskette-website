@@ -5,7 +5,7 @@ import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
-  <Navigation>
+  <Navigation v-if="!$route.meta.hideNav">
     <template v-slot:items>
       <nav>
         <ul class="flex gap-2 text-lg">
@@ -17,11 +17,11 @@ import Navigation from "./components/Navigation.vue";
       </nav>
     </template>
   </Navigation>
-  <Landing />
+  <Landing v-if="!$route.meta.hideLanding"/>
   <section id="content">
     <RouterView />
   </section>
-  <Footer v-if="$route.path !== '/'"/>
+  <Footer v-if="!$route.meta.hideFoot"/>
 </template>
 
 <style>
